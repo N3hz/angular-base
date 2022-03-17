@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+<nav class="navbar" role="navigation" aria-label="dropdown navigation">
+  <div class="navbar-item has-dropdown is-hoverable">
+
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+
+    <a routerLink="info" class="navbar-item">
+      Info
+    </a>
+
+    <a class="navbar-link">
+      Modulos
+    </a>
+
+    <div class="navbar-dropdown">
+      <a class="navbar-item" routerLink="pkmn">
+        Pokemon
+      </a>
+      <a class="navbar-item" routerLink="contador">
+        Contador
+      </a>
+      <a class="navbar-item" routerLink="heroes">
+        Heroes
+      </a>
+      <a class="navbar-item" routerLink="lista-heroes">
+        Lista Heroes
+      </a>
+      <a class="navbar-item" routerLink="main">
+        Main Pjs
+      </a>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container is-max-desktop">
+  <router-outlet></router-outlet>
+</div>

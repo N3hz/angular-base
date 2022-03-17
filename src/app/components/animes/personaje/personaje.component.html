@@ -1,0 +1,25 @@
+<table class="table table is-bordered is-striped is-narrow is-hoverable">
+  <thead>
+    <tr>
+      <th colspan="3">Lista Personaje</th>
+    </tr>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let personaje of personajes">
+      <td>
+        {{ personaje.nombre }}
+      </td>
+      <td>
+        {{ personaje.edad | number }}
+      </td>
+      <td colspan="2">
+        <button class="button is-danger is-small" (click)="borrarPersonaje(personaje.id)" >Borrar Personaje</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

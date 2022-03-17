@@ -1,0 +1,41 @@
+<!--<form (submit)="agregarPersonaje( $event )">-->
+<form (ngSubmit)="enviarPersonaje()">
+  <table class="table table is-bordered is-striped is-narrow is-hoverable">
+    <thead>
+      <tr>
+        <th colspan="2">Agregar Personaje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Nombre:
+        </td>
+        <td>
+          <input
+            type="text"
+            name="nombre"
+            [(ngModel)] = 'nuevo.nombre'
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Edad:
+        </td>
+        <td>
+          <input
+            type="number"
+            name="edad"
+            [(ngModel)] = 'nuevo.edad'
+          >
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button type="submit" class="button is-success is-small">Agregar Personaje</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>

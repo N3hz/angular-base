@@ -1,0 +1,27 @@
+<table class="table table is-bordered is-striped is-narrow is-hoverable">
+  <thead>
+    <tr>
+      <th colspan="3">
+        <h2>{{ titulo }}</h2>
+      </th>
+    </tr>
+    <tr>
+      <th colspan="3">
+        <h3>La Base es : <input type="number" style="width: 50px;font-size: 17px;" [(ngModel)]="base"/></h3>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <button (click)="acumular(-base)" class="button is-small is-primary">Restar</button>
+      </td>
+      <td>
+        <span>{{ numero }}</span>
+      </td>
+      <td>
+        <button (click)="acumular(+base)" class="button is-small is-primary">Sumar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

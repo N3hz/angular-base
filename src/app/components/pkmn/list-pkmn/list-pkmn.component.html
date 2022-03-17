@@ -1,0 +1,25 @@
+ <table class="table table is-bordered is-striped is-narrow is-hoverable" style="min-width: 400px">
+  <thead>
+    <tr>
+      <th colspan="3">Lista Pokemon</th>
+    </tr>
+    <tr>
+      <th>Pokemon</th>
+      <th>Tipo 1</th>
+      <th>Tipo 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pkmn of listaPkmn">
+      <td>
+        {{ pkmn.nombre }}
+      </td>
+      <td>
+        {{ pkmn.tipo1 }}
+      </td>
+      <td>
+        {{ pkmn.tipo2 }}
+      </td>
+    </tr>
+  </tbody>
+</table>

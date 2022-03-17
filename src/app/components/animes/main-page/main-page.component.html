@@ -1,0 +1,9 @@
+
+<app-personaje [personajes]="personajes"
+  (salidaBorrado)="borrarPersonaje($event)"
+></app-personaje>
+<br>
+<app-agregar-personaje
+  [nuevo]="nuevoPersonaje"
+  (salida)="agregarNuevoPersonaje($event)"
+></app-agregar-personaje>

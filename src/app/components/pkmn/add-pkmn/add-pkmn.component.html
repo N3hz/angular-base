@@ -1,0 +1,57 @@
+<!--<form (submit)="agregarPersonaje( $event )">-->
+  <form (ngSubmit)="agregarPkmn()">
+    <table class="table table is-bordered is-striped is-narrow is-hoverable" style="min-width: 400px">
+      <thead>
+        <tr>
+          <th colspan="2">Agregar Personaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Nombre:
+          </td>
+          <td>
+            <input
+              type="text"
+              name="nombre"
+              [(ngModel)] = 'nuevo.nombre'
+              (click)="limpiarError()"
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Tipo 1:
+          </td>
+          <td>
+            <input
+              type="text"
+              name="tipo1"
+              [(ngModel)] = 'nuevo.tipo1'
+              (click)="limpiarError()"
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Tipo 2:
+          </td>
+          <td>
+            <input
+              type="text"
+              name="tipo2"
+              [(ngModel)] = 'nuevo.tipo2'
+              (click)="limpiarError()"
+            >
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="button is-success is-small">Agregar Personaje</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <i><b *ngIf="error" style="color: red;">Debe ingresar un nombre, y al menos el primer tipo del pokémon</b></i>
+  </form>

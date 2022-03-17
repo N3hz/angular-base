@@ -1,0 +1,33 @@
+<table class="table table is-bordered is-striped is-narrow is-hoverable">
+  <thead>
+    <tr>
+      <th>Lista Heroes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <ul>
+          <li *ngFor="let heroe of heroes; let i = index">
+             {{ i + 1 }} - {{ heroe }}
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button (click)="borrarUltimoHeroe()" class="button is-link is-small">Borrar Heroe</button>
+      </td>
+    </tr>
+    <tr>
+      <td *ngIf="heroeBorrado; else noBorrado">
+        Heroe Borrado : <small style="color:red"> {{ heroeBorrado }} </small>
+      </td>
+      <ng-template #noBorrado>
+        <td>
+          No se ha borrado Nada.
+        </td>
+      </ng-template>
+    </tr>
+  </tbody>
+</table>
